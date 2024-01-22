@@ -1,0 +1,11 @@
+Order, 11>commande, 1N>utilisateur
+utilisateur:num_utilisateur, name, mot_de_passe, created_at, updated_at
+Belong to, 01>produit, 1N>categorie
+categorie: num_category, nom, created_at, updated_at
+:
+
+commande: num_order, num_facture, statut, created_at, updated_at
+Contain, 0N>produit, 1N>commande
+produit:num_produit, nom, quantité, statut, created_at, updated_at
+Has2, 0N>produit, 1N>etiquette
+etiquette: num_tag, nom, created_at, updated_at
